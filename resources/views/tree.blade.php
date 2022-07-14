@@ -58,12 +58,12 @@
         -->
 
 
-@foreach($treeView as $category)
+@foreach($treeView as $tree)
   <li class="treeview">
-    <a href="#"><i class="fa fa-link"></i> <span>{{ $category->name }}</span> <i class="fa fa-angle-left pull-right"></i></a>
+    <a href="#"><i class="fa fa-link"></i> <span>{{ $tree->name }}</span> <i class="fa fa-angle-left pull-right"></i></a>
     <ul class="treeview-menu">
-      @foreach($category->subcategories as $subcategory)
-        <li class=""><a href="#">{{$subcategory->name}}</a></li>
+      @foreach($tree->subcategories as $subchild)
+        <li class=""><a href="#">{{$subchild->name}}</a></li>
       @endforeach
     </ul>
   </li>
