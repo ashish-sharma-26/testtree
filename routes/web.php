@@ -14,19 +14,5 @@ use App\Http\Controllers\TreeController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-
-
-Route::get('/', function () {
-    return view('index');
-});
-
-
-// Route::get('treeview', function () {
-//     return view('tree');
-// });
 
 Route::get('treeview', [TreeController::class, "index"]);
